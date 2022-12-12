@@ -13,13 +13,11 @@ pipeline {
             steps {
                 echo 'Running Build phase...'  
                 echo 'java --version'
-                sh 'mvn clean package'
             }
         }
         stage ('Test') {
             steps {
-                echo 'Running Test phase...'   
-                 sh 'mvn test'             
+                echo 'Running Test phase...'         
             }
         }        
         stage ('Deploy') {          
